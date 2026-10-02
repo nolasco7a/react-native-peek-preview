@@ -1,0 +1,57 @@
+{
+  "name": "@nolasco7a/react-native-peek-preview",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "description": "iOS-style long-press peek preview for React Native, with a glass action menu and safe-area aware positioning.",
+  "author": "Allan Nolasco",
+  "license": "MIT",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "peerDependencies": {
+    "expo-blur": ">=12.0.0",
+    "expo-haptics": ">=12.0.0",
+    "react": ">=18.0.0",
+    "react-native": ">=0.73.0",
+    "react-native-reanimated": ">=3.0.0",
+    "react-native-safe-area-context": ">=4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.2",
+    "expo-blur": "~57.0.3",
+    "expo-haptics": "~57.0.3",
+    "react": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-reanimated": "4.5.1",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-worklets": "0.10.1",
+    "typescript": "~6.0.3",
+    "vitepress": "^1.6.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nolasco7a/react-native-peek-preview.git"
+  },
+  "homepage": "https://nolasco7a.github.io/react-native-peek-preview/",
+  "keywords": [
+    "react-native",
+    "preview",
+    "peek",
+    "context-menu",
+    "long-press",
+    "reanimated",
+    "ios"
+  ],
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ]
+}
