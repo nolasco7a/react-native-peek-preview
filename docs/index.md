@@ -32,19 +32,25 @@ features:
 
 ## See it in action
 
+Recorded on a physical iPhone and a physical Android device, same code, same
+props — only the platform differs.
+
+### iOS
+
 <div class="demo-grid">
 
 <div class="demo-item">
 
-### Peeking a list row
+#### List rows
 
-Hold a row: it lifts under your finger, the background blurs and dims, and the
-preview expands from the item's own position into a centred card.
+Hold a row and it lifts under your finger while the background blurs and dims.
+The preview expands from the row's own position and the glass menu settles
+underneath it.
 
 <div class="video-embed">
   <iframe
-    src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID"
-    title="react-native-peek-preview — peeking a list row"
+    src="https://www.youtube.com/embed/ghyonk3sI-g"
+    title="react-native-peek-preview on iOS — peeking a list row"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen
@@ -55,15 +61,40 @@ preview expands from the item's own position into a centred card.
 
 <div class="demo-item">
 
-### Scrolling inside the preview
+#### Cards
 
-Pass `preview` as a function to receive the resolved height ceiling, and the
-content scrolls inside the card instead of being clipped.
+The same component wrapping cards instead of rows, with the preview scrolling
+inside the card and each case using a different `theme`.
 
 <div class="video-embed">
   <iframe
-    src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID"
-    title="react-native-peek-preview — scrolling inside the preview"
+    src="https://www.youtube.com/embed/mTPEQSoivPc"
+    title="react-native-peek-preview on iOS — peeking cards"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+</div>
+
+</div>
+
+</div>
+
+### Android
+
+<div class="demo-grid">
+
+<div class="demo-item">
+
+#### List rows
+
+Same effect through `RenderEffectBlur`, with the backdrop composing a dark tint
+instead of a light one so the dim does not wash out.
+
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube.com/embed/04saEaaW1T0"
+    title="react-native-peek-preview on Android — peeking a list row"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen
@@ -74,15 +105,15 @@ content scrolls inside the card instead of being clipped.
 
 <div class="demo-item">
 
-### Actions
+#### Cards
 
-Up to three actions in a vertical glass menu, or spread across a row. Tapping
-one runs it and dismisses the preview.
+Cards on Android, including the hardware back button dismissing the preview
+rather than navigating behind it.
 
 <div class="video-embed">
   <iframe
-    src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID"
-    title="react-native-peek-preview — action menu"
+    src="https://www.youtube.com/embed/NqIojjwWEFo"
+    title="react-native-peek-preview on Android — peeking cards"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen
@@ -103,7 +134,12 @@ one runs it and dismisses the preview.
 }
 .demo-section h2 {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 12px;
+}
+.demo-section h3 {
+  margin: 40px 0 24px;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 24px;
 }
 .demo-grid {
   display: grid;
@@ -112,7 +148,7 @@ one runs it and dismisses the preview.
 }
 @media (min-width: 768px) {
   .demo-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .video-embed {
